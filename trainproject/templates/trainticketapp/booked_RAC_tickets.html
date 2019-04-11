@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static "css/train_ticket.css" %}">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+</head>
+<body>
+  <div class="container" align="center">
+    <div class="jumbotron">
+      <h1>Tickets Allocated</h1>
+      {% if ticket %}
+      <table border=2>
+        <thead>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>RAC_SEATS</th>
+        </thead>
+        {% for tic in ticket %}
+        <tr>
+          <td>{{tic.name}}</td>
+          <td>{{tic.age}}</td>
+          <td>{{tic.gender}}</td>
+          <td>{{tic.rac_seats}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <br>
+      <br>
+      <h1>Total RAC Tickets Booked : {{count}} </h1><BR>
+    {% else %}
+      <p>No Tickets</p>
+    {% endif%}
+    <a class="btn btn-primary btn-lg" href="/home" role="button">BACK</a>
+    </div>
+    </div>
+
+ </body>
+ </html>

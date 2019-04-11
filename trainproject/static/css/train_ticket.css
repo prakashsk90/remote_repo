@@ -1,0 +1,36 @@
+.container   .jumbotron{
+  max-width: 100%
+  height: auto;
+  padding: 50px 50px;
+  border: 100px solid black;
+  margin: 50px 50px 50px 50px;
+  background:yellow;
+  color:black;
+  font-family:'ZCOOL KuaiLe', cursive;
+}
+table,tr,td{
+  border:2px solid white;
+  font-size:30px;
+  color:white;
+  background:red;
+  margin:auto;
+  text-align:center;
+}
+thead,th{
+  border:2px solid red;
+  font-size:30px;
+  color:blue;
+  background:yellow;
+  margin:auto;
+}
+h1{
+  text-align:center;
+  font-size:90px;
+  color:black;
+}
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 30px;
+    border-radius: 10px;
+    font-family:'ZCOOL KuaiLe', cursive;
+}

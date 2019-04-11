@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static "css/train_ticket.css" %}">
+  <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+</head>
+<body>
+  <div class="container" align="center">
+    <div class="jumbotron">
+      <h1>Person Info</h1>
+      <form method="post">
+        <table border=1>
+          {{form.as_p}}
+        </table>
+        {%csrf_token%}
+      <input type="submit" name="" class="btn btn-primary btn-lg" value="Submit"><br><br>
+		</form>
+    <a class="btn btn-primary btn-lg" href="/book" role="button">BACK</a>
+    </div>
+  </div>
+</body>
+</html>
